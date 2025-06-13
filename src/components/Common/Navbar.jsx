@@ -93,7 +93,7 @@ function Navbar() {
                           <>
                             {subLinks
                               ?.filter(
-                                (subLink) => subLink?.courses?.length > 0
+                               (subLink) => Array.isArray(subLink?.courses) && subLink.courses.length > 0
                               )
                               ?.map((subLink, i) => (
                                 <Link
